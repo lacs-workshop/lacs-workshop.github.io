@@ -128,7 +128,7 @@ We are particularly interested in work that applies machine learning or AI to im
     <li>Runtime adaptation</li>
     <li>Performance analysis</li>
     <li>Hardware–software co-design</li>
-    <li></li>The infrastructure and methodology needed to evaluate learning-augmented systems</li>
+    <li>The infrastructure and methodology needed to evaluate learning-augmented systems</li>
 </ul>
 The themes below illustrate the scope of the workshop rather than define strict boundaries. We welcome interdisciplinary work that combines ideas from compilers, systems, architecture, programming languages, machine learning, and performance engineering.
 Submissions need not fit neatly into one category. We encourage authors to submit bold, unconventional, and high-risk ideas that could open new directions for learning-augmented compilers and systems.
@@ -136,85 +136,81 @@ Submissions need not fit neatly into one category. We encourage authors to submi
 <h3>Topics of Interest</h3>
     <h4>Machine Learning for Compiler Optimization</h4>
         <ul>
-          <li>Learned cost models and optimization heuristics</li>
-          <li>Optimization phase ordering and pass selection</li>
-          <li>Loop, tensor, and data-layout transformations</li>
-          <li>Register allocation and instruction scheduling</li>
-          <li>Vectorization, parallelization, and code generation</li>
-          <li>Kernel, algorithm, and implementation selection</li>
-          <li>Profile-guided and feedback-directed optimization</li>
-          <li>Search-space exploration and autotuning</li>
-          <li>Transfer learning across programs, workloads, and architectures</li>
-          <li>Optimization across multiple intermediate representations</li>
-          <li>ML-guided optimization in LLVM, MLIR, GCC, Halide, TVM, XLA, Triton, and related infrastructures</li>
+            <li>Learned cost models and optimization heuristics</li>
+            <li>Optimization phase ordering and pass selection</li>
+            <li>Register allocation and instruction scheduling</li>
+            <li>Search-space exploration and autotuning</li>
+            <li>ML-guided optimization in LLVM, MLIR, GCC, TVM & related</li>
         </ul>
-    
+
     <h4>AI-Augmented Compiler and Systems Workflows</h4>
         <ul>
-          <li>AI-assisted optimization discovery and design-space exploration</li>
-          <li>Automated kernel generation, optimization, and tuning</li>
-          <li>Agent-based compiler and systems optimization</li>
-          <li>Human-in-the-loop optimization workflows</li>
-          <li>AI-assisted performance analysis and diagnosis</li>
-          <li>Compiler debugging, testing, and validation</li>
-          <li>Workflows combining AI proposals with compiler legality and correctness checks</li>
-          <li>Tools for compiler and systems developer productivity</li>
-          <li>AI-assisted experiment design and result interpretation</li>
-          <li>Retrieval and use of compiler, architecture, or system knowledge</li>
+            <li>AI-assisted optimization discovery & design-space exploration</li>
+            <li>Automated kernel generation, optimization, and tuning</li>
+            <li>Agent-based compiler and systems optimization</li>
+            <li>Compiler debugging, testing, and validation</li>
+            <li>Tools for compiler and systems developer productivity</li>
+        </ul>
+    <h4>Learning-Augmented Runtime and System Optimization</h4>
+        <ul>
+            <li>Runtime optimization and adaptive execution</li>
+            <li>Task scheduling and resource allocation</li>
+            <li>Memory management and hierarchy optimization</li>
+            <li>Dynamic compilation and runtime specialization</li>
+            <li>Energy-, thermal-, and power-aware optimization</li>
+        </ul>
+    <h4>Learning for ML Systems and Emerging Workloads</h4>
+        <ul>
+            <li>Compilation and optimization of ML workloads</li>
+            <li>Kernel selection, fusion, and scheduling</li>
+            <li>Quantization, sparsity, and mixed-precision execution</li>
+            <li>Optimization for large models and generative-AI</li>
+            <li>Performance portability across heterogeneous architectures</li>
+        </ul>
+    <h4>Hardware–Software–Learning Co-Design</h4>
+        <ul>
+            <li>ML-guided computer architecture design</li>
+            <li>Compiler–architecture co-optimization</li>
+            <li>Design-space exploration for accelerators</li>
+            <li>Mapping and scheduling for heterogeneous hardware</li>
+            <li>Learning-assisted FPGA, ASIC, and accelerator design</li>
+        </ul>
+    <h4>Data, Infrastructure, Evaluation, and Reproducibility</h4>
+        <ul>
+            <li>Training-data generation and curation</li>
+            <li>Benchmark suites and shared datasets</li>
+            <li>Evaluation methodologies for learned optimizations</li>
+            <li>Reproducibility and replication studies</li>
+            <li>Generalization across workloads and architectures</li>
+        </ul>
+    <h4>Emerging Methods and Future Directions</h4>
+        <ul>
+            <li>Reinforcement learning and sequential decision-making</li>
+            <li>Foundation models for compiler and systems optimization</li>
+            <li>Explainable and interpretable learned decisions</li>
+            <li>Few-shot, transfer, continual, and online learning</li>
+            <li>Self-improving compilers and adaptive systems</li>
         </ul>
 
-We Particularly Encourage
+<h3>We Particularly Encourage</h3>
+
 LACS is intended to promote open technical discussion, including discussion of approaches that did not work as expected.
 We particularly encourage submissions presenting:
-•	Negative results and carefully analyzed failed approaches
-•	Lessons learned from research or deployment
-•	Unexpected empirical observations
-•	Reproducibility and replication studies
-•	Comparisons showing when traditional heuristics remain preferable
-•	Industrial experiences and deployment challenges
-•	Preliminary results and work in progress
-•	New datasets, benchmarks, tools, and evaluation methodologies
-•	Open research questions and community challenges
-•	Bold or unconventional ideas that challenge existing assumptions
-A learned method does not need to outperform every existing approach to provide a valuable contribution. Well-designed studies that identify limitations, tradeoffs, failure modes, or conditions under which an approach succeeds or fails are strongly encouraged.
-    
+    <ul>
+        <li>Negative results and carefully analyzed failed approaches</li>
+        <li>Lessons learned from research or deployment</li>
+        <li>Unexpected empirical observations</li>
+        <li>Reproducibility and replication studies</li>
+        <li>Comparisons showing when traditional heuristics remain preferable</li>
+        <li>Industrial experiences and deployment challenges</li>
+        <li>Preliminary results and work in progress</li>
+        <li>New datasets, benchmarks, tools, and evaluation methodologies</li>
+        <li>Open research questions and community challenges</li>
+        <li>Bold or unconventional ideas that challenge existing assumptions</li>
+    </ul>
+A learned method does not need to outperform every existing approach to provide a valuable contribution. 
+Well-designed studies that identify limitations, tradeoffs, failure modes, or conditions under which an approach succeeds or fails are strongly encouraged.    
 
-</div>
-
-<div class="section">
-<h2>Topics of Interest</h2>
-
-<h3>Learning-Augmented Compilers</h3>
-<ul>
-    <li>ML-guided compiler optimizations (LLVM, MLIR, Halide, TVM, XLA)</li>
-    <li>Learned cost models and scheduling</li>
-    <li>Kernel selection and operator optimization</li>
-    <li>ML-based profile-guided optimization (ML-PGO)</li>
-    <li>Transfer learning across architectures</li>
-</ul>
-
-<h3>LLMs for Systems</h3>
-<ul>
-    <li>LLM-driven optimization and autotuning</li>
-    <li>Code generation for systems</li>
-    <li>Agent-based system debugging</li>
-    <li>Performance modeling</li>
-</ul>
-
-<h3>Systems for ML / LLMs</h3>
-<ul>
-    <li>Efficient training and inference</li>
-    <li>Serving systems (batching, caching)</li>
-    <li>Distributed systems</li>
-    <li>Memory optimization</li>
-</ul>
-
-<h3>Hardware–ML–Compiler Co-Design</h3>
-<ul>
-    <li>ML-driven hardware design</li>
-    <li>Compiler–hardware co-optimization</li>
-    <li>Cross-layer optimization</li>
-</ul>
 </div>
 
 <div class="section">
