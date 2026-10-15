@@ -166,8 +166,10 @@ LACS provides a forum for sharing ongoing research, early results, practical exp
               <td>UCLA</td>
               <td>
                 <details>
-                  <summary><strong>Talk title TBA</strong></summary>
-                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                  <summary><strong>TinyVortex: A Learning-Guided Kernel Scheduling Engine for Configurable SIMT GPU Co-Design Space Exploration</strong></summary>
+                  <p><strong>Abstract:</strong> 
+                      Tensor compilers typically optimize kernels for fixed hardware targets, overlooking opportunities for joint hardware–software design-space exploration. To this end, we present TinyVortex, an open-source fork of the tinygrad Tensor compiler targeting the configurable RISC-V Vortex GPGPU as the backend. TinyVortex enables end-to-end PyTorch-like Tensor program execution, Vortex C++ kernel generation, and performance evaluation across various GPU microarchitectural configurations across the SIMT hierarchy (threads/warps/issue-width/cores). Building on this infrastructure, we introduce a learning-guided autotuning framework that jointly explores kernel scheduling decisions and hardware parameters, which we currently prototype using cycle-level simulation. Preliminary evaluations demonstrate 1.13x and 2.97x geometric-mean speedups over default kernel rendering schedules for vector addition and SGEMM, respectively, highlighting the potential of configuration-aware compilation for GPU hardware–software co-design.
+                  </p>
                 </details>
               </td>
             </tr>
@@ -196,8 +198,10 @@ LACS provides a forum for sharing ongoing research, early results, practical exp
               </td>
               <td>
                 <details>
-                  <summary><strong>Talk title TBA</strong></summary>
-                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                  <summary><strong>ProfileWeaver: Cost-Aware Profiler AI Harness for Automated Performance Analysis and Optimization of HPC Applications</strong></summary>
+                  <p><strong>Abstract:</strong> 
+                        We study optimizers for constrained layers that consume the gradient at the constrained output and update the underlying parameters directly. For a doubly stochastic routing block parameterized by Sinkhorn iterations, training under such an optimizer leaves the score-to-router backward graph with no registered consumer. The runtime cannot discover this, because which gradients each optimizer consumes is recorded nowhere in the graph. We propose gradient-consumer declarations and dead-Jacobian elimination, which let the runtime skip building backward graphs that nothing will read. On our routing workload, the declaration cuts retained autograd state from 82 tensors to one per router; under torch.compile, the differentiated router remains 2.2× slower than the primal path and still retains its backward state. With the optimizer held identical and parameter updates numerically unchanged, eliminating the dead graph makes a full training step 6.7% faster. The optimizer’s own solves are small and dispatch-bound; batching them across routers and compiling the batched program shifts the lowest-latency execution from CPU to GPU as the number of routers grows, and a two-parameter cost model fitted per execution selects the fastest one at every held-out batch size.
+                  </p>
                 </details>
               </td>
             </tr>
@@ -216,8 +220,12 @@ LACS provides a forum for sharing ongoing research, early results, practical exp
               <td>UCLA</td>
               <td>
                 <details>
-                  <summary><strong>Talk title TBA</strong></summary>
-                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                  <summary><strong>Compiling Layout Transformations for NPUs and FPGAs</strong></summary>
+                  <p><strong>Abstract:</strong> 
+                      Efficient execution on NPUs and FPGAs requires reconciling producer and consumer access patterns while sustaining parallelism and avoiding memory-bank conflicts. This talk presents our work on compiling layout transformations, from bit-level stream permutations to closed-form mixed-radix swizzles, with applications to streaming FFTs and NPU data movement.
+                      <br>  
+                      We then examine the challenges of realizing these transformations through existing HLS tools. We share lessons from using LLM agents to optimize HLS source code and refine generated RTL, highlighting performance limitations and correctness failures. These experiences motivated an MLIR agent dialect for contract-guided RTL refinement that makes compiler-derived goals, permitted transformations, and validation conditions explicit. We discuss how mathematical layout models, deterministic compilation, and LLM agents can work together to produce efficient hardware.
+                </p>
                 </details>
               </td>
             </tr>
