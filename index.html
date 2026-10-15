@@ -116,135 +116,138 @@ LACS provides a forum for sharing ongoing research, early results, practical exp
   <h2>Schedule</h2>
 
   <div class="schedule-table-wrapper">
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th scope="col">Time</th>
-          <th scope="col">Session</th>
-          <th scope="col">Speakers</th>
-          <th scope="col">Affiliation</th>
-          <th scope="col">Talk details</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr class="schedule-break">
-          <td>1:30–1:35 PM</td>
-          <td colspan="4"><strong>Opening remarks</strong></td>
-        </tr>
-
-        <tr>
-          <td>1:35–2:05 PM</td>
-          <td>Talk</td>
-          <td>
-            Sushaan Kandukoori<br />
-            Aarya Patel
-          </td>
-          <td>De Anza College</td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-
-        <tr>
-          <td>2:05–2:35 PM</td>
-          <td>Talk</td>
-          <td>
-            Nikhil Rout<br />
-            Blaise Tine
-          </td>
-          <td>UCLA</td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-
-        <tr>
-          <td>2:35–3:05 PM</td>
-          <td>Talk</td>
-          <td>
-            Xingjian Ding<br />
-            Tejas Ramesh<br />
-            Jonathan Ramirez<br />
-            Anthony Ramirez<br />
-            Henry Valladares<br />
-            Shuyin Jiao<br />
-            Keren Zhou<br />
-            Pengfei Su
-          </td>
-          <td>
-            UC Merced<br />
-            George Mason University<br />
-            UC Merced<br />
-            UC Merced<br />
-            UC Merced<br />
-            NCSU<br />
-            George Mason University, OpenAI<br />
-            UC Merced
-          </td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-
-        <tr class="schedule-break">
-          <td>3:05–3:30 PM</td>
-          <td colspan="4"><strong>Coffee break</strong></td>
-        </tr>
-
-        <tr>
-          <td>3:30–4:00 PM</td>
-          <td>Talk</td>
-          <td>
-            Chengyue Wang<br />
-            Jason Cong
-          </td>
-          <td>UCLA</td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-
-        <tr>
-          <td>4:00–4:30 PM</td>
-          <td>Talk</td>
-          <td>William Moses</td>
-          <td>UIUC</td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-
-        <tr>
-          <td>4:30–5:00 PM</td>
-          <td>Talk</td>
-          <td>Mary Hall</td>
-          <td>University of Utah</td>
-          <td>
-            <details>
-              <summary><strong>Title TBA</strong></summary>
-              <p><strong>Abstract:</strong> TBA</p>
-            </details>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Speakers</th>
+              <th scope="col">Affiliation</th>
+              <th scope="col">Talk title and abstract</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr class="schedule-break">
+              <td>1:30–1:35 PM</td>
+              <td colspan="3"><strong>Opening remarks</strong></td>
+            </tr>
+        
+            <tr>
+              <td>1:35–2:05 PM</td>
+              <td>
+                Sushaan Kandukoori<br />
+                Aarya Patel
+              </td>
+              <td>De Anza College</td>
+              <td>
+                <details>
+                  <summary><strong>Optimizer-Aware Autodiff for Doubly Stochastic Routers</strong></summary>
+                  <p><strong>Abstract:</strong> 
+                    We study optimizers for constrained layers that consume the gradient at the constrained output and update the underlying parameters directly. 
+                    For a doubly stochastic routing block parameterized by Sinkhorn iterations, training under such an optimizer leaves the score-to-router backward graph 
+                    with no registered consumer. The runtime cannot discover this, because which gradients each optimizer consumes is recorded nowhere in the graph. 
+                    We propose gradient-consumer declarations and dead-Jacobian elimination, which let the runtime skip building backward graphs that nothing will read. 
+                    On our routing workload the declaration cuts retained autograd state from 82 tensors  to one per router; under torch.compile the differentiated router 
+                    remains 2.2x slower than the primal path and still retains its backward state. 
+                    With the optimizer held identical and parameter updates numerically unchanged, eliminating the dead graph makes a full training step 6.7% faster. 
+                    The optimizer's own solves are small and dispatch-bound; batching them across routers and compiling the batched program shifts the lowest-latency execution 
+                    from CPU to GPU as the number of routers grows, and a two-parameter cost model fitted per execution selects the fastest one at every held-out batch size.  
+                  </p>
+                </details>
+              </td>
+            </tr>
+        
+            <tr>
+              <td>2:05–2:35 PM</td>
+              <td>
+                Nikhil Rout<br />
+                Blaise Tine
+              </td>
+              <td>UCLA</td>
+              <td>
+                <details>
+                  <summary><strong>Talk title TBA</strong></summary>
+                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                </details>
+              </td>
+            </tr>
+        
+            <tr>
+              <td>2:35–3:05 PM</td>
+              <td>
+                Xingjian Ding<br />
+                Tejas Ramesh<br />
+                Jonathan Ramirez<br />
+                Anthony Ramirez<br />
+                Henry Valladares<br />
+                Shuyin Jiao<br />
+                Keren Zhou<br />
+                Pengfei Su
+              </td>
+              <td>
+                UC Merced<br />
+                George Mason University<br />
+                UC Merced<br />
+                UC Merced<br />
+                UC Merced<br />
+                NCSU<br />
+                George Mason University, OpenAI<br />
+                UC Merced
+              </td>
+              <td>
+                <details>
+                  <summary><strong>Talk title TBA</strong></summary>
+                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                </details>
+              </td>
+            </tr>
+        
+            <tr class="schedule-break">
+              <td>3:05–3:30 PM</td>
+              <td colspan="3"><strong>Coffee break</strong></td>
+            </tr>
+        
+            <tr>
+              <td>3:30–4:00 PM</td>
+              <td>
+                Chengyue Wang<br />
+                Jason Cong
+              </td>
+              <td>UCLA</td>
+              <td>
+                <details>
+                  <summary><strong>Talk title TBA</strong></summary>
+                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                </details>
+              </td>
+            </tr>
+        
+            <tr>
+              <td>4:00–4:30 PM</td>
+              <td>William Moses</td>
+              <td>UIUC</td>
+              <td>
+                <details>
+                  <summary><strong>Talk title TBA</strong></summary>
+                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                </details>
+              </td>
+            </tr>
+        
+            <tr>
+              <td>4:30–5:00 PM</td>
+              <td>Mary Hall</td>
+              <td>University of Utah</td>
+              <td>
+                <details>
+                  <summary><strong>Talk title TBA</strong></summary>
+                  <p><strong>Abstract:</strong> Abstract forthcoming.</p>
+                </details>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 </section>
 
 <style>
